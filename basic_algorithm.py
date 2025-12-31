@@ -29,8 +29,17 @@ def addup_2(n):
     total = (1+n) * n/2
     return int(total)
 
+# 九九の式を出力する
+def multiplication_table():
+    for i in range(1, 10):
+        result = ""
+        for j in range(1, 10):
+            result = result + "{} x {} = {:2d}  ".format(j, i, i*j)
+        print(result)
+
 if __name__ == "__main__":
-    average_score()
-    print("Addup", addup(10))
-    print("Recursive Addup", recursive_addup(10))
-    print("Addup_2", addup_2(10))
+    # average_score()
+    # print("Addup", addup(10))
+    # print("Recursive Addup", recursive_addup(10))
+    # print("Addup_2", addup_2(10))
+    print("Multiplication Table", multiplication_table())
