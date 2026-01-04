@@ -37,9 +37,22 @@ def multiplication_table():
             result = result + "{} x {} = {:2d}  ".format(j, i, i*j)
         print(result)
 
+# 素数を求めるアルゴリズム
+def is_prime():
+    for i in range(2, 11):
+        half = i // 2
+        prime = True
+        for j in range(2, half + 1):
+            if i % j == 0:
+                prime = False
+                break
+        if prime:
+            print(i)
+
 if __name__ == "__main__":
     # average_score()
     # print("Addup", addup(10))
     # print("Recursive Addup", recursive_addup(10))
     # print("Addup_2", addup_2(10))
-    print("Multiplication Table", multiplication_table())
+    # print("Multiplication Table", multiplication_table())
+    print(is_prime())
