@@ -1,7 +1,6 @@
-# 線形リスト
-# 片方向リスト
-# 双方向リスト
-# 循環リスト
+# 線形リストの処理時間
+# 線形リストは、データの追加や削除の計算量がO(1)
+# ただし、データの探索にはO(n)の時間がかかる(データを追加する際、空きノードを探のとか)
 
 MAX = 5
 
@@ -11,6 +10,7 @@ pointer = [None]*MAX
 
 head = 0
 
+# 先頭にデータを追加する関数
 def add_list(value):
     n = -1
     for i in range(MAX):
@@ -29,6 +29,7 @@ def add_list(value):
     print("Added:", value)
     return True
     
+# 指定したデータを削除する関数
 def del_list(value):
     global head
     n = -1
@@ -53,6 +54,7 @@ def del_list(value):
     print("Deleted:", value)
     return True
 
+# リストの内容を表示する関数
 def put_list():
     p = head
     while True:
@@ -62,6 +64,7 @@ def put_list():
             break
         p = pointer[p]
 
+# テストコード
 for i in range(10, 70, 10):
     add_list(i)
 del_list(10)
